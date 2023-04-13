@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ForDelete</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_first_fragment">Куку</string>
+    <string name="hello_second_fragment">Ёпта</string>
+    <string name="welcome">Добро \n пожаловать в твоё \n расписание!</string>
+    <string name="login">Логин</string>
+    <string name="password">Пароль</string>
+    <string name="log_in">Войти</string>
+</resources>
