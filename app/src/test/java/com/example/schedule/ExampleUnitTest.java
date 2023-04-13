@@ -1,4 +1,4 @@
-package com.example.fordelete;
+package com.example.schedule;
 
 import org.junit.Test;
 

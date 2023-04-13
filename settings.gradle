@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "ForDelete"
+rootProject.name = "Schedule"
 include ':app'
