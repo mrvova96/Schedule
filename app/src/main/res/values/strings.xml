@@ -4,4 +4,7 @@
     <string name="login">Логин</string>
     <string name="password">Пароль</string>
     <string name="log_in">Войти</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="snackbar_message">Неверный логин или пароль. Пожалуйста, повторите попытку!</string>
+    <string name="snackbar_action">ОК</string>
 </resources>
