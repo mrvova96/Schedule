@@ -1,20 +1,29 @@
 package com.example.schedule.data.database.entity;
 
+import androidx.annotation.NonNull;
 import androidx.room.Entity;
-import androidx.room.Ignore;
+import androidx.room.ForeignKey;
+import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "students")
+@Entity(
+        tableName = "students",
+        indices = @Index(value = {"surname", "name", "patronymic"}, unique = true),
+        foreignKeys = {
+                @ForeignKey(onDelete = 5, entity = Group.class, parentColumns = "ID", childColumns = "groupID"),
+                @ForeignKey(onDelete = 5, entity = LoginDetails.class, parentColumns = "ID", childColumns = "ID")
+        }
+)
 public class Student {
 
-    @PrimaryKey(autoGenerate = true)
-    private int ID;
+    @PrimaryKey
+    private long ID;
     private String surname;
     private String name;
     private String patronymic;
-    private int groupID;
+    private long groupID;
 
-    public Student(int ID, String surname, String name, String patronymic, int groupID) {
+    public Student(long ID, String surname, String name, String patronymic, long groupID) {
         this.ID = ID;
         this.surname = surname;
         this.name = name;
@@ -22,12 +31,7 @@ public class Student {
         this.groupID = groupID;
     }
 
-    @Ignore
-    public Student(String surname, String name, String patronymic, int groupID) {
-        this(0, surname, name, patronymic, groupID);
-    }
-
-    public int getID() {
+    public long getID() {
         return ID;
     }
 
@@ -43,7 +47,15 @@ public class Student {
         return patronymic;
     }
 
-    public int getGroupID() {
+    public long getGroupID() {
         return groupID;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return getSurname().concat(" ")
+                .concat(String.valueOf(getName().charAt(0))).concat(". ")
+                .concat(String.valueOf(getPatronymic().charAt(0))).concat(".");
     }
 }

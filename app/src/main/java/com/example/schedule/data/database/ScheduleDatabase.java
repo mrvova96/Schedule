@@ -2,34 +2,50 @@ package com.example.schedule.data.database;
 
 import android.app.Application;
 
-import androidx.room.AutoMigration;
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-import com.example.schedule.data.database.dao.AdminDao;
-import com.example.schedule.data.database.dao.LoginDao;
-import com.example.schedule.data.database.dao.StudentDao;
-import com.example.schedule.data.database.dao.TeacherDao;
+import com.example.schedule.data.database.dao.ScheduleDao;
+import com.example.schedule.data.database.entity.Admin;
+import com.example.schedule.data.database.entity.Classroom;
+import com.example.schedule.data.database.entity.Day;
+import com.example.schedule.data.database.entity.Faculty;
+import com.example.schedule.data.database.entity.Group;
+import com.example.schedule.data.database.entity.Lesson;
+import com.example.schedule.data.database.entity.LessonsTime;
 import com.example.schedule.data.database.entity.LoginDetails;
+import com.example.schedule.data.database.entity.MainAdmin;
 import com.example.schedule.data.database.entity.Schedule;
 import com.example.schedule.data.database.entity.Student;
 import com.example.schedule.data.database.entity.Teacher;
-import com.example.schedule.data.roles.ScheduleRole;
+import com.example.schedule.data.database.entity.TeacherLessonCrossRef;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.nio.channels.FileChannel;
 
 @Database(
         entities =
                 {
+                        MainAdmin.class,
+                        Admin.class,
+                        Classroom.class,
+                        Day.class,
+                        Faculty.class,
+                        Group.class,
+                        Lesson.class,
+                        LessonsTime.class,
                         LoginDetails.class,
+                        Schedule.class,
                         Student.class,
                         Teacher.class,
-                        Schedule.class
+                        TeacherLessonCrossRef.class
                 },
-        version = 2,
+        version = 1,
         exportSchema = false
-//        autoMigrations = {
-//                @AutoMigration(from = 1, to = 2)
-//        }
 )
 public abstract class ScheduleDatabase extends RoomDatabase {
 
@@ -49,11 +65,20 @@ public abstract class ScheduleDatabase extends RoomDatabase {
         return instance;
     }
 
-    public abstract LoginDao loginDao();
-
-    public abstract AdminDao adminDao();
-
-    public abstract StudentDao studentDao();
-
-    public abstract TeacherDao teacherDao();
+    public abstract ScheduleDao scheduleDao();
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

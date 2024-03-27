@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingVertical="30dp"
+    tools:context=".ui.teacher.TeacherMenuFragment">
+
+    <Button
+        android:id="@+id/buttonTeachersList"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/style_button_login"
+        android:fontFamily="@font/raleway_medium"
+        android:gravity="center"
+        android:paddingHorizontal="10dp"
+        android:text="Изменить список"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonTeacherLessons"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/style_button_login"
+        android:fontFamily="@font/raleway_medium"
+        android:gravity="center"
+        android:paddingHorizontal="10dp"
+        android:text="Изменить предметы"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonTeachersList" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

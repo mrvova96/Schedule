@@ -1,35 +1,38 @@
 package com.example.schedule.data.database.entity;
 
+import androidx.annotation.NonNull;
 import androidx.room.Entity;
+import androidx.room.ForeignKey;
 import androidx.room.Ignore;
+import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "teachers")
+@Entity(
+        tableName = "teachers",
+        indices = @Index(value = {"surname", "name", "patronymic"}, unique = true),
+        foreignKeys = {
+                @ForeignKey(onDelete = 5, entity = Faculty.class, parentColumns = "ID", childColumns = "facultyID"),
+                @ForeignKey(onDelete = 5, entity = LoginDetails.class, parentColumns = "ID", childColumns = "ID")
+        }
+)
 public class Teacher {
 
-    @PrimaryKey(autoGenerate = true)
-    private int ID;
+    @PrimaryKey
+    private long ID;
     private String surname;
     private String name;
     private String patronymic;
-    private int lessonID;
     private int facultyID;
 
-    public Teacher(int ID, String surname, String name, String patronymic, int lessonID, int facultyID) {
+    public Teacher(long ID, String surname, String name, String patronymic, int facultyID) {
         this.ID = ID;
         this.surname = surname;
         this.name = name;
         this.patronymic = patronymic;
-        this.lessonID = lessonID;
         this.facultyID = facultyID;
     }
 
-    @Ignore
-    public Teacher(String surname, String name, String patronymic, int lessonID, int facultyID) {
-        this(0, surname, name, patronymic, lessonID, facultyID);
-    }
-
-    public int getID() {
+    public long getID() {
         return ID;
     }
 
@@ -45,11 +48,15 @@ public class Teacher {
         return patronymic;
     }
 
-    public int getLessonID() {
-        return lessonID;
-    }
-
     public int getFacultyID() {
         return facultyID;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return getSurname().concat(" ")
+                .concat(String.valueOf(getName().charAt(0))).concat(". ")
+                .concat(String.valueOf(getPatronymic().charAt(0))).concat(".");
     }
 }

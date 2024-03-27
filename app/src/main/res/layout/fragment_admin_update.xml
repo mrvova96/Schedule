@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.admin.AdminUpdateFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="40dp">
+
+        <TextView
+            android:id="@+id/textViewSurname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway_medium"
+            android:text="Фамилия"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/editTextUpdateSurname"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextUpdateSurname"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:background="@drawable/style_edit_text"
+            android:fontFamily="@font/raleway_medium"
+            android:hint="Введите фамилию:"
+            android:inputType="textPersonName"
+            android:paddingHorizontal="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey"
+            android:textSize="18sp"
+            android:layout_marginHorizontal="50dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewSurname"
+            app:layout_constraintWidth_max="300dp"
+            tools:text="Фамилия" />
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/raleway_medium"
+            android:text="Имя"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/editTextUpdateName"
+            app:layout_constraintTop_toBottomOf="@+id/editTextUpdateSurname" />
+
+        <EditText
+            android:id="@+id/editTextUpdateName"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:background="@drawable/style_edit_text"
+            android:fontFamily="@font/raleway_medium"
+            android:hint="Введите имя:"
+            android:inputType="textPersonName"
+            android:paddingHorizontal="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey"
+            android:textSize="18sp"
+            android:layout_marginHorizontal="50dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewName"
+            app:layout_constraintWidth_max="300dp"
+            tools:text="Имя" />
+
+        <TextView
+            android:id="@+id/textViewPatronymic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/raleway_medium"
+            android:text="Отчество"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/editTextUpdatePatronymic"
+            app:layout_constraintTop_toBottomOf="@+id/editTextUpdateName" />
+
+        <EditText
+            android:id="@+id/editTextUpdatePatronymic"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:background="@drawable/style_edit_text"
+            android:fontFamily="@font/raleway_medium"
+            android:hint="Введите отчество:"
+            android:inputType="textPersonName"
+            android:paddingHorizontal="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey"
+            android:textSize="18sp"
+            android:layout_marginHorizontal="50dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPatronymic"
+            app:layout_constraintWidth_max="300dp"
+            tools:text="Отчество" />
+
+        <TextView
+            android:id="@+id/textViewLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/raleway_medium"
+            android:text="Логин"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/editTextUpdateLogin"
+            app:layout_constraintTop_toBottomOf="@+id/editTextUpdatePatronymic" />
+
+        <EditText
+            android:id="@+id/editTextUpdateLogin"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:background="@drawable/style_edit_text"
+            android:fontFamily="@font/raleway_medium"
+            android:hint="Введите логин:"
+            android:inputType="textPersonName"
+            android:paddingHorizontal="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey"
+            android:textSize="18sp"
+            android:layout_marginHorizontal="50dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewLogin"
+            app:layout_constraintWidth_max="300dp"
+            tools:text="Логин" />
+
+        <TextView
+            android:id="@+id/textViewPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/raleway_medium"
+            android:text="Пароль"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/editTextUpdatePassword"
+            app:layout_constraintTop_toBottomOf="@+id/editTextUpdateLogin" />
+
+        <EditText
+            android:id="@+id/editTextUpdatePassword"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:background="@drawable/style_edit_text"
+            android:fontFamily="@font/raleway_medium"
+            android:hint="Введите пароль:"
+            android:inputType="textPersonName"
+            android:paddingHorizontal="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey"
+            android:textSize="18sp"
+            android:layout_marginHorizontal="50dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewPassword"
+            app:layout_constraintWidth_max="300dp"
+            tools:ignore="TextFields"
+            tools:text="Пароль" />
+
+        <Button
+            android:id="@+id/buttonUpdateAdmin"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/style_button_login"
+            android:fontFamily="@font/raleway_semibold"
+            android:text="Редактировать"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextUpdatePassword" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

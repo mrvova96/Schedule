@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:background="@color/white">
+
+    <TextView
+        android:id="@+id/textViewLessonNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/raleway_semibold"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewLineLesson"
+        app:layout_constraintStart_toEndOf="@+id/imageViewLineLesson"
+        app:layout_constraintTop_toTopOf="@+id/imageViewLineLesson"
+        tools:text="1." />
+
+    <TextView
+        android:id="@+id/textViewEmptyLesson"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="50dp"
+        android:fontFamily="@font/raleway_semibold"
+        tools:text="Окно / Нет пары"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewLessonNumber"
+        app:layout_constraintTop_toTopOf="@+id/textViewLessonNumber" />
+
+    <ImageView
+        android:id="@+id/imageViewLineLesson"
+        android:layout_width="6dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/grey"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonAdd"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewLineBrake"
+        android:layout_width="6dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="18dp"
+        android:background="@color/grey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonAdd"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewLineLesson" />
+
+    <ImageButton
+        android:id="@+id/imageButtonAdd"
+        android:layout_width="39dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="39dp"
+        app:layout_constraintTop_toTopOf="@+id/imageViewLineLesson"
+        app:srcCompat="@drawable/icon_add" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,7 +4,30 @@
     <string name="login">Логин</string>
     <string name="password">Пароль</string>
     <string name="log_in">Войти</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="snackbar_message">Неверный логин или пароль. Пожалуйста, повторите попытку!</string>
     <string name="snackbar_action">ОК</string>
+    <string name="classroom">Аудитория:</string>
+    <string name="teacher">Преподаватель:</string>
+    <string name="numerator">Числитель</string>
+    <string name="denominator">Знаменатель</string>
+
+    <array name="types_of_lessons">
+        <item>Практика</item>
+        <item>Лекция</item>
+    </array>
+
+    <array name="months_of_the_year">
+        <item>Январь</item>
+        <item>Февраль</item>
+        <item>Март</item>
+        <item>Апрель</item>
+        <item>Май</item>
+        <item>Июнь</item>
+        <item>Июль</item>
+        <item>Август</item>
+        <item>Сентябрь</item>
+        <item>Октябрь</item>
+        <item>Ноябрь</item>
+        <item>Декабрь</item>
+    </array>
+
 </resources>

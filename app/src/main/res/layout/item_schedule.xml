@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:background="@color/white">
+
+    <TextView
+        android:id="@+id/textViewLessonNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="7dp"
+        android:fontFamily="@font/raleway_semibold"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/imageViewLineLesson"
+        app:layout_constraintTop_toTopOf="@+id/imageViewLineLesson"
+        tools:text="1." />
+
+    <TextView
+        android:id="@+id/textViewLessonName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="50dp"
+        android:fontFamily="@font/raleway_semibold"
+        tools:text="История"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewLessonNumber"
+        app:layout_constraintTop_toTopOf="@+id/textViewLessonNumber" />
+
+    <TextView
+        android:id="@+id/textViewLessonTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway_medium"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_marginBottom="3dp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewClassroom"
+        app:layout_constraintStart_toStartOf="@+id/textViewClassroom"
+        tools:text="9:00-10:35" />
+
+    <TextView
+        android:id="@+id/textViewClassroom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/raleway_medium"
+        android:text="@string/classroom"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewLineLesson"
+        app:layout_constraintStart_toEndOf="@+id/imageViewLineLesson" />
+
+    <TextView
+        android:id="@+id/textViewClassroomName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:fontFamily="@font/raleway_medium"
+        tools:text="415"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/textViewClassroom"
+        app:layout_constraintTop_toTopOf="@+id/textViewClassroom" />
+
+    <TextView
+        android:id="@+id/textViewTeacher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="@font/raleway_medium"
+        android:text="Преподаватель:"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewLessonTime" />
+
+    <TextView
+        android:id="@+id/textViewTeacherName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/raleway_medium"
+        tools:text="Соколов А. В. / ПМИ-41"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTeacher"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTeacher" />
+
+    <TextView
+        android:id="@+id/textViewGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="@font/raleway_medium"
+        android:text="Группа:"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewLessonTime" />
+
+    <TextView
+        android:id="@+id/textViewGroupName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/raleway_medium"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTeacher"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTeacher" />
+
+    <TextView
+        android:id="@+id/textViewBreak"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/raleway_semibold"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewLineBrake"
+        app:layout_constraintStart_toEndOf="@+id/imageViewLineBrake"
+        app:layout_constraintTop_toTopOf="@+id/imageViewLineBrake"
+        tools:text="Перерыв / Окончание пар" />
+
+    <ImageView
+        android:id="@+id/imageViewLineLesson"
+        android:layout_width="6dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/grey"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonEdit"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewLineBrake"
+        android:layout_width="6dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="18dp"
+        android:background="@color/grey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonEdit"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewLineLesson" />
+
+    <ImageButton
+        android:id="@+id/imageButtonEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:padding="7dp"
+        android:layout_marginTop="17dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageViewLineLesson"
+        app:srcCompat="@drawable/icon_edit" />
+
+    <ImageButton
+        android:id="@+id/imageButtonDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:background="@android:color/transparent"
+        android:padding="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonEdit"
+        app:srcCompat="@drawable/icon_delete" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

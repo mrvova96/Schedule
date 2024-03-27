@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.schedule.ScheduleMainFragment">
+
+    <View
+        android:id="@+id/viewLecture"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="25dp"
+        android:background="@color/pink"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewLecture"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:fontFamily="@font/raleway_medium"
+        android:gravity="center"
+        android:text="  -  лекция"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/viewLecture"
+        app:layout_constraintTop_toTopOf="@+id/viewLecture" />
+
+    <View
+        android:id="@+id/viewPractice"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@color/blue"
+        app:layout_constraintEnd_toStartOf="@+id/textViewPractice"
+        app:layout_constraintTop_toTopOf="@+id/viewLecture" />
+
+    <TextView
+        android:id="@+id/textViewPractice"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginEnd="50dp"
+        android:fontFamily="@font/raleway_medium"
+        android:gravity="center"
+        android:text="  -  практика"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/viewLecture" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/viewBottomMenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewLecture" />
+
+    <View
+        android:id="@+id/viewBottomMenu"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButtonNavLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/icon_nav_left"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/viewBottomMenu"
+        app:layout_constraintTop_toBottomOf="@+id/viewPager" />
+
+    <ImageButton
+        android:id="@+id/imageButtonNavRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/icon_nav_right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewPager" />
+
+    <TextView
+        android:id="@+id/textViewWeekType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway_semibold"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:layout_marginBottom="11dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonNavRight"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonNavLeft"
+        tools:text="Числитель" />
+
+    <TextView
+        android:id="@+id/textViewCurrentMonth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway_semibold"
+        android:gravity="center"
+        tools:text="Май 2023"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:layout_marginTop="11dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonNavRight"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonNavLeft"
+        app:layout_constraintTop_toBottomOf="@+id/viewPager" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.admin.AdminMenuFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="30dp">
+
+        <Button
+            android:id="@+id/buttonScheduleList"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/style_button_login"
+            android:fontFamily="@font/raleway_medium"
+            android:gravity="center"
+            android:paddingHorizontal="10dp"
+            android:text="Расписание"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/buttonFacultiesList"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/style_button_login"
+            android:fontFamily="@font/raleway_medium"
+            android:gravity="center"
+            android:paddingHorizontal="10dp"
+            android:text="Факультеты"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonScheduleList" />
+
+        <Button
+            android:id="@+id/buttonGroupsList"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/style_button_login"
+            android:fontFamily="@font/raleway_medium"
+            android:gravity="center"
+            android:paddingHorizontal="10dp"
+            android:text="Группы"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonFacultiesList" />
+
+        <Button
+            android:id="@+id/buttonLessonsList"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/style_button_login"
+            android:fontFamily="@font/raleway_medium"
+            android:gravity="center"
+            android:paddingHorizontal="10dp"
+            android:text="Предметы"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonGroupsList" />
+
+        <Button
+            android:id="@+id/buttonClassroomsList"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/style_button_login"
+            android:fontFamily="@font/raleway_medium"
+            android:gravity="center"
+            android:paddingHorizontal="10dp"
+            android:text="Аудитории"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonLessonsList" />
+
+        <Button
+            android:id="@+id/buttonStudentsList"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/style_button_login"
+            android:fontFamily="@font/raleway_medium"
+            android:gravity="center"
+            android:paddingHorizontal="10dp"
+            android:text="Студенты"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonClassroomsList" />
+
+        <Button
+            android:id="@+id/buttonTeachersList"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/style_button_login"
+            android:fontFamily="@font/raleway_medium"
+            android:gravity="center"
+            android:paddingHorizontal="10dp"
+            android:text="Преподаватели"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonStudentsList" />
+
+        <Button
+            android:id="@+id/buttonAdminsList"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/style_button_login"
+            android:fontFamily="@font/raleway_medium"
+            android:gravity="center"
+            android:paddingHorizontal="10dp"
+            android:text="Администраторы"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonTeachersList" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
