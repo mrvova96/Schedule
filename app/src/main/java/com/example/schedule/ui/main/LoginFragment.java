@@ -27,6 +27,8 @@ import com.example.schedule.databinding.FragmentLoginBinding;
 import com.example.schedule.presentation.main.LoginViewModel;
 import com.google.android.material.snackbar.Snackbar;
 
+import java.util.Objects;
+
 public class LoginFragment extends Fragment {
 
     private String login;
@@ -168,7 +170,7 @@ public class LoginFragment extends Fragment {
                         .setPositiveButton("Выйти", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                getActivity().finish();
+                                Objects.requireNonNull(getActivity()).finish();
                                 System.exit(0);
                             }
                         })
